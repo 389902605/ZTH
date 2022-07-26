@@ -1,7 +1,8 @@
 package Test;
 
 public class Person {
-    //属性
+    //属性、
+
 //    String name;
 //    int age;
     //方法

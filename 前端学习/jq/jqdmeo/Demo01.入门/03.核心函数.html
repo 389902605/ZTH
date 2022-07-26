@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+
+	//核心函数的4个作用
+	//1.传入参数为[函数]时：在文档加载完成后执行这个函数
+	//2.传入参数为[HTML字符串]时：根据这个字符串创建元素节点对象
+	//3.传入参数为[选择器字符串]时：根据这个字符串查找元素节点对象
+	//4.传入参数为[DOM对象]时：将DOM对象包装为jQuery对象返回
+		//alert("文档加载之前执行");
+		$(function(){
+			//alert("文档加载之后执行")
+			//2.传入参数为[HTML字符串]时：根据这个字符串创建元素节点对象
+			//在city中添加广州节点
+			//var $li=$("<li>广州</li>");
+			//$("#city").append($li);
+			
+			//使用dom对象只能操作dom对象
+			var cityEle=document.getElementById("city")
+			//alert(cityEle.innerHTML)
+			//将dom对象转换为jquery对象使用$()
+			alert($(cityEle)[0].innerHTML);
+		})
+	
+</script>
+</head>
+<body>
+	
+	<ul id="city">
+		<li id="bj">北京</li>
+		<li>上海</li>
+		<li>东京</li>
+		<li>首尔</li>
+	</ul>
+
+</body>
+</html>

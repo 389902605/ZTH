@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DOM对象和jQuery对象</title>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		
+		var divEle = document.getElementById("testDiv");
+		
+		var $divObj = $("#testDiv");
+		/*绑定单击响应函数*/
+		$("#dom2dom").click(function(){
+			alert(divEle.innerHTML);
+		})
+		$("#dom2jQuery").click(function(){
+			alert($divObj.innerHTML);
+		})
+		
+		$("#jQuery2jQuery").click(function(){
+			alert($divObj.text());
+		})
+		
+		$("#jQuery2dom").click(function(){
+			alert($divObj.innerHTML)
+		})
+		
+		
+		
+	});
+
+</script>
+</head>
+<body>
+
+	<div id="testDiv"> bdqn is Very Good!</div>
+	
+	<button id="dom2dom">使用DOM对象调用DOM方法</button>
+	<button id="dom2jQuery">使用DOM对象调用jQuery方法</button>
+	<button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+	<button id="jQuery2dom">使用jQuery对象调用DOM方法</button>
+
+</body>
+</html>
